@@ -3,7 +3,7 @@
 // Built files are kept for this version only, so the app still opens without a connection.
 // The owner's content and pictures come from the API's own address and are never touched here.
 
-const VERSION = '2026-11-03T06:49:55.670Z' // replaced with the build time (vite.config.ts → pwa())
+const VERSION = '2026-11-03T12:49:58.798Z' // replaced with the build time (vite.config.ts → pwa())
 const FILES = `vb-files-${VERSION}`
 const START = self.registration.scope // the site's home page, e.g. …/velary-bunchie-site/
 
@@ -30,6 +30,8 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
   const { request } = event
   if (request.method !== 'GET' || new URL(request.url).origin !== self.location.origin) return
+  // video arrives in pieces (range requests), which a kept copy cannot answer: the browser fetches it
+  if (request.headers.has('range') || request.destination === 'video') return
 
   if (request.mode === 'navigate') {
     // every address is the same app page; offline, the copy kept at install opens instead
