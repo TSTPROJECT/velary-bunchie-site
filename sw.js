@@ -3,7 +3,7 @@
 // Built files are kept for this version only, so the app still opens without a connection.
 // The owner's content and pictures come from the API's own address and are never touched here.
 
-const VERSION = '2026-11-03T04:28:01.573Z' // replaced with the build time (vite.config.ts → pwa())
+const VERSION = '2026-11-03T06:20:18.390Z' // replaced with the build time (vite.config.ts → pwa())
 const FILES = `vb-files-${VERSION}`
 const START = self.registration.scope // the site's home page, e.g. …/velary-bunchie-site/
 

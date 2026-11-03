@@ -1,1 +1,0 @@
-import{b as e,j as t}from"./index-4_TaJSik.js";import{n,t as r}from"./InnerPage-Beq6zVe2.js";var i=e();function a(){return(0,i.jsx)(r,{title:`Lost in the lace`,children:(0,i.jsx)(n,{title:`Page not found`,children:(0,i.jsxs)(`p`,{children:[`This door doesn’t lead anywhere. `,(0,i.jsx)(t,{to:`/`,children:`Return to the menu`}),`.`]})})})}export{a as default};
